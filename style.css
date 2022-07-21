@@ -1,0 +1,226 @@
+* {
+    /* padding: 0;
+    margin: 0; */
+    box-sizing: border-box;
+}
+
+.card-container {
+    padding: 30px;
+    display: inline-block;
+    width: 22%;
+    margin: 0 1.5% 10px;
+    height: 570px;
+    border: 1px solid black;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+}
+
+.action{
+    padding-top: 20px;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+.caption {
+    position: relative;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 50px;
+    border-bottom: 1px solid black;
+    padding-top: 10px;
+}
+
+.author-image {
+    display: inline;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0px 0px 10px 0px;
+}
+
+
+.post-info-container {
+    width: 80%;
+    position: absolute;
+    display: inline-block;
+    padding: 2px 0px 0px 20px;
+}
+
+.likes{
+    padding: 15px 0px 0px 30px;
+    display: inline-block;
+    position: absolute;
+}
+.like-button{
+    padding: 10px 0px 0px 0px;
+    display: inline-block;
+    position: relative;
+    height: 40px;
+}
+
+.imgSource {
+    width: 30px;
+    text-align: center;
+    position: relative;
+    float: right;
+    padding: 5px 0px 0px 0px;
+}
+
+.imageContainer {
+    height: 325px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.overlay {
+    display: none;
+}
+
+.overlay .backdrop {
+    width: 100%;
+    height: 100%;
+    display: inline;
+    background-color: black;
+    opacity: 50%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay.show {
+    display: block;
+}
+
+.overlay .big-card {
+    display: inline;
+    position: absolute;
+    opacity: 100%;
+    width: 80%;
+    height: 500px;
+    background-color: white;
+    transform: translateY(-100%);
+    padding: 15px;
+    margin: 0px 0px 0px 10%;
+}
+
+.overlay .big-card .big-card-image-container {
+    display: inline-block;
+    height: 100%;
+    width: 65%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+.overlay .big-card .big-card-data-container {
+    display: inline-block;
+    position: absolute;
+    width: 34%;
+    padding: 5px;
+}
+.big-card-post-info-container{
+    display: inline-block;
+    position: absolute;
+    margin: 20px 0px 0px 15%;
+}
+.big-card-imgSource{
+    display: inline-block;
+    position: absolute;
+    margin: 25px 25px 25px 50%;
+}
+.load-data{
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    margin: 20px 0 20px 45%;
+}
+.big-card-author-image{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+
+
+@media only screen and (max-width: 991px) {
+    .card-container {
+        width: 44%;
+        margin: 0 3% 10px;
+    }
+    .overlay{
+        width: 100%;
+    }
+
+    .overlay .big-card {
+        width: 80%;
+        transform: translateY(-220%);
+        margin: 0px 10% 0px 10%;
+    }
+
+    .overlay .big-card .big-card-data-container {
+        display: inline-block;
+        width: 32.5%;
+        height: 100%;
+    }
+    .post-info-container{
+        width: 50%;
+    }
+    .big-card-author-image{
+        border-radius: 50%;
+        width: 60px;
+    }
+    .big-card-caption{
+        padding: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .card-container {
+        width: 80%;
+        margin: 0 6% 10px;
+    }
+    .overlay{
+        width: 100%;
+    }
+
+    .overlay .big-card {
+        position: fixed;
+        width: 80%;
+        transform: translateY(-450%);
+        margin: 0px 0px 0px 10%;
+    }
+
+    .overlay .big-card .big-card-data-container {
+        display: inline-block;
+        width: 32.5%;
+        height: 100%;
+    }
+    .header{
+        width: 100%;
+    }
+    .post-info-container{
+        display: inline-block;
+        position: absolute;
+        width: 50%;
+    }
+    .big-card-caption{
+        display: block;
+        position: relative;
+    }
+    .big-card-author-image{
+        border-radius: 50%;
+        width: 50px;
+    }
+    .big-card-post-info-container{
+        display: inline-block;
+        padding: 0px 0px 10px 5px;
+    }
+}
