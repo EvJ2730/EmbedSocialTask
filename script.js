@@ -59,10 +59,10 @@ function bigLikeClick(e) {
 
 function loadData() {
 	if (pageData.length - 1 >= page + 3) {
-		console.log('can load more')
-		let nextPageData = pageData.slice(page, page + 4);
+		console.log(pageData.length);
+		let nextPageData = pageData.slice(page, page + 6);
 		addCard(nextPageData);
-		page += 4;
+		page += 6;
 	} else {
 		loadedAll = true;
 		console.log("can't load more")
@@ -142,7 +142,6 @@ function createImageRow(post) {
 	let imageContainer = document.createElement('div')
 	imageContainer.classList.add('imageContainer');
 	imageContainer.style.backgroundImage = "url(" + post.image + ")";
-
 	return imageContainer;
 }
 
